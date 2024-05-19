@@ -24,7 +24,7 @@ def fib_comparison(a, b):
 	num = []
 	cpp = []
 
-	for n in range(a, b):
+	for n in range(a, b+1):
 		x.append(n)
 
 		t = pc()
@@ -43,9 +43,9 @@ def fib_comparison(a, b):
 	fig = plt.figure()
 	ax = fig.add_subplot()
 
-	ax.scatter(x, py, c='r')
-	ax.scatter(x, num, c='g')
-	ax.scatter(x, cpp, c='b')
+	ax.scatter(x, py, c='r', s=10)
+	ax.scatter(x, num, c='g', s=13)
+	ax.scatter(x, cpp, c='b', s=10)
 	plt.savefig('fib_plot.png')
 
 
