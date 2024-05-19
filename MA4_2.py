@@ -43,9 +43,9 @@ def fib_comparison(a, b):
 	fig = plt.figure()
 	ax = fig.add_subplot()
 
-	ax.plot(x, py, c='r', s=10)
-	ax.plot(x, num, c='g', s=10)
-	ax.plot(x, cpp, c='b', s=10)
+	ax.plot(x, py, c='r')
+	ax.plot(x, num, c='g')
+	ax.plot(x, cpp, c='b')
 	#ax.set_aspect('equal', adjustable='box')
 	plt.savefig('fib_plot.png')
 
