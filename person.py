@@ -24,6 +24,9 @@ class Person(object):
 
 	def getDecades(self):
 		return lib.Person_getDecades(self.obj)
+	
+	def fib(self):
+		return lib.Person_fib(self.obj)
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
