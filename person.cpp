@@ -7,7 +7,7 @@ class Person{
 		int getAge();
 		void setAge(int);
 		double getDecades();
-		int fib(int);
+		int fib();
 	private:
 		int age;
 		int fib_p(int);
@@ -27,7 +27,7 @@ int Person::fib_p(int n){
 }
 
 int Person::fib(){
-	return fib(age);
+	return fib_p(age);
 }
 
 int Person::getAge(){
