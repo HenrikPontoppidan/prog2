@@ -56,7 +56,17 @@ def fib_comparison(a, b):
 
 
 def main():
-	fib_comparison(30, 42)
+	#fib_comparison(30, 42)
+	
+
+	t = pc()
+	print(f'Numba n={47}:\t', fib_numba(47))
+	print('Tid för numba n = 47:\t', pc()-t)
+
+	t = pc()
+	f = Person(47)
+	print(f'C++ n={47}:\t', f.fib())
+	print('Tid för c++ n = 47:\t', pc()-t)
 
 if __name__ == '__main__':
 	main()
