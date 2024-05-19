@@ -57,11 +57,7 @@ def fib_comparison(a, b):
 
 
 def main():
-	f = Person(30)
-	print(f.fib())
-
-	print(fib_py(30))
-	print(fib_numba(30))
+	fib_comparison(30, 35)
 
 if __name__ == '__main__':
 	main()
