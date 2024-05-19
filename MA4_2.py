@@ -44,7 +44,7 @@ def fib_comparison(a, b):
 	ax = fig.add_subplot()
 
 	ax.scatter(x, py, c='r', s=10)
-	ax.scatter(x, num, c='g', s=13)
+	ax.scatter(x, num, c='g', s=16)
 	ax.scatter(x, cpp, c='b', s=10)
 	plt.savefig('fib_plot.png')
 
@@ -56,7 +56,7 @@ def fib_comparison(a, b):
 
 
 def main():
-	fib_comparison(30, 38)
+	fib_comparison(30, 42)
 
 if __name__ == '__main__':
 	main()
