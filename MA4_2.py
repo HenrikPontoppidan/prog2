@@ -2,6 +2,8 @@
 
 from person import Person
 from numba import njit
+import matplotlib.pyplot as plt
+from time import perf_counter as pc
 
 def fib_py(n):
 	if n <= 1:
@@ -15,6 +17,44 @@ def fib_numba(n):
 		return n
 	else:
 		return(fib_numba(n-1) + fib_numba(n-2))
+
+def fib_comparison(a, b):
+	x = []
+	py = []
+	num = []
+	cpp = []
+
+	for n in range(a, b):
+		x.append(n)
+
+		t = pc()
+		print(f'Python n={n}:\t', fib_py(n))
+		py.append(pc()-t)
+
+		t = pc()
+		print(f'Numba n={n}:\t', fib_numba(n))
+		num.append(pc()-t)
+
+		t = pc()
+		f = Person(n)
+		print(f'c++ n={n}:\t', f.fib())
+		cpp.append(pc()-t)
+
+	fig = plt.figure()
+	ax = fig.add_subplot()
+
+	ax.plot(x, py, c='r', s=10)
+	ax.plot(x, num, c='g', s=10)
+	ax.plot(x, cpp, c='b', s=10)
+	#ax.set_aspect('equal', adjustable='box')
+	plt.savefig('fib_plot.png')
+
+		
+
+		
+
+
+
 
 def main():
 	f = Person(30)
