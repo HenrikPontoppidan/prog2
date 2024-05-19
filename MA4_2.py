@@ -46,18 +46,17 @@ def fib_comparison(a, b):
 	ax.scatter(x, py, c='r')
 	ax.scatter(x, num, c='g')
 	ax.scatter(x, cpp, c='b')
-	#ax.set_aspect('equal', adjustable='box')
 	plt.savefig('fib_plot.png')
 
-		
 
-		
+
+
 
 
 
 
 def main():
-	fib_comparison(30, 35)
+	fib_comparison(30, 38)
 
 if __name__ == '__main__':
 	main()
