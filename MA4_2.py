@@ -35,17 +35,19 @@ def fib_comparison(a, b):
 		print(f'Numba n={n}:\t', fib_numba(n))
 		num.append(pc()-t)
 
+		'''
 		t = pc()
 		f = Person(n)
 		print(f'c++ n={n}:\t', f.fib())
 		cpp.append(pc()-t)
+		'''
 
 	fig = plt.figure()
 	ax = fig.add_subplot()
 
 	ax.scatter(x, py, c='r', s=10)
 	ax.scatter(x, num, c='g', s=16)
-	ax.scatter(x, cpp, c='b', s=10)
+	#ax.scatter(x, cpp, c='b', s=10)
 	plt.savefig('fib_plot.png')
 
 
@@ -56,9 +58,8 @@ def fib_comparison(a, b):
 
 
 def main():
-	#fib_comparison(30, 42)
-	
-
+	fib_comparison(20, 30)
+	'''
 	t = pc()
 	print(f'Numba n={47}:\t', fib_numba(47))
 	print('Tid för numba n = 47:\t', pc()-t)
@@ -67,6 +68,19 @@ def main():
 	f = Person(47)
 	print(f'C++ n={47}:\t', f.fib())
 	print('Tid för c++ n = 47:\t', pc()-t)
+	'''
+
 
 if __name__ == '__main__':
 	main()
+
+
+
+'''
+Numba n=47:      2971215073
+Tid för numba n = 47:    47.67142782919109
+C++ n=47:        -1323752223
+Tid för c++ n = 47:      47.24620654108003
+
+större än 2^31
+'''
